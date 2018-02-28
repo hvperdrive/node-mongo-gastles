@@ -16,7 +16,7 @@ Hello world
 1. Create a file `script.js`
 2. Add some javascript  
 ```
-console.log('Hello world')`
+console.log('Hello world')
 ```
 3. Run the script
 ```
