@@ -37,4 +37,18 @@ module.exports = (app) => {
             name: 'Jan Peeters',
         });
     });
+
+    app.route('/api/students').post((req, res) => {
+        res.status(201).json(Object.assign({}, req.body, {
+            id: (students.length + 1).toString(),
+        }));
+    });
+
+    app.route('/api/students/:id').put((req, res) => {
+        res.status(200).json(req.body);
+    });
+
+    app.route('/api/students/:id').delete((req, res) => {
+        res.status(204).send();
+    });
 }
