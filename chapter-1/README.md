@@ -130,9 +130,13 @@ $ npm init
 https://www.npmjs.com/package/chalk
 
 1. Install the package
+
+https://docs.npmjs.com/cli/install
+
 ```
 $ npm install chalk
 ```
+> npm install saves any specified packages into dependencies by default. Additionally, you can control where and how they get saved with some additional flags: `-D` or `--save-dev`: Package will appear in your devDependencies
 
 2. Check the updated `package.json`
 ```
@@ -154,9 +158,17 @@ $ npm install chalk
 ```
 
 3. Check the `package.lock` file
+
+https://docs.npmjs.com/files/package-lock.json
+
+> It describes the exact tree that was generated, such that subsequent installs are able to generate identical trees, regardless of intermediate dependency updates.
+
 > (git) Always commit this file
 
 4. Check the `node_modules` folder
+
+> Folder with all the installed packages
+
 > (git) Never commit this folder
 
 5. Use the package
@@ -170,3 +182,38 @@ console.log(chalk.blue('Hello world!'));
 ```
 $ node .
 ```
+
+### Starting from an existing app / package
+
+> Run `npm install` to install all the `dependencies` and `dev-dependencies`. 
+
+### Speed up development
+
+> Starting your app over and over again is a lot of work. Luckily, there is a tool to do this for us: `nodemon`
+
+https://nodemon.io/
+
+1. Install nodemon (global)
+
+```
+$ npm install -g nodemon
+```
+
+2. Test nodemon installation
+```
+$ nodemon -v
+```
+
+3. Run your app with `nodemon`
+```
+$ nodemon .
+```
+
+4. Make a change in the source _(index.js)_
+```
+console.log(chalk.red('Hello world, this is chapter 2!'));
+```
+
+_Option: Using nodemon without global installation:_
+
+https://techoverflow.net/2017/08/12/using-nodemon-without-a-global-installation/
