@@ -5,10 +5,9 @@ const config = {
     port: 3000,
 };
  
-app.get('/', (req, res) => {
-  res.send('Hello World')
-});
- 
+// Init routes
+require("./routes/")(app);
+
 app.listen(config.port, () => {
     console.log(`Server listening at port ${config.port}.`); // eslint-disable-line no-console
 });

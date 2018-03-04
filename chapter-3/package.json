@@ -9,6 +9,7 @@
   "author": "Jasper De Smet <jasper.desmet@studiohyperdrive.be>",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "glob": "^7.1.2"
   }
 }
