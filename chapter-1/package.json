@@ -2,7 +2,7 @@
   "name": "chapter-1",
   "version": "1.0.0",
   "description": "",
-  "author": "Jasper De Smet <jasper.desmet@studiohyperdrive.be",
+  "author": "Jasper De Smet <jasper.desmet@studiohyperdrive.be>",
   "license": "ISC",
   "main": "index.js",
   "scripts": {
