@@ -30,3 +30,7 @@ $ mongo
 * ### [chapter-0](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-0/chapter-0) (_warm up_)
 * ### [chapter-1](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-1/chapter-1)
 * ### [chapter-2](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-2/chapter-2) (_sync / async_)
+* ### [chapter-3](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-3/chapter-3) (_express_)
+    * #### [chapter-3.1](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-3.1/chapter-3) (_rest routes_)
+    * #### [chapter-3.2](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-3.2/chapter-3) (_controllers and services_)
+    * #### [chapter-3.3](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-3.3/chapter-3) (_mongo_)
