@@ -307,7 +307,7 @@ Hello world
 
 ### Run node script
 
-1. Create a file `script.js`
+1. Create a file `index.js`
 2. Add some javascript  
 ```
 console.log('Hello world')
@@ -315,7 +315,7 @@ console.log('Hello world')
 3. Run the script
 ```
 $ cd path/to/chapter-0/
-$ node script.js
+$ node index.js
 > Hello world
 ```
 
@@ -352,6 +352,7 @@ $ mongo
 * ### [chapter-1](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-1) (_npm ecosystem_)
 * ### [chapter-2](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-2) (_sync / async_)
 * ### [chapter-3](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-3) (_express_)
-    * #### [chapter-3.1](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-3.1) (_rest routes_)
-    * #### [chapter-3.2](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-3.2) (_controllers and services_)
-    * #### [chapter-3.3](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-3.3) (_mongo_)
+* ### [chapter-4](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-4) (_rest routes_)
+* ### [chapter-5](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-5) (_controllers and services_)
+* ### [chapter-6](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-6) (_mongo_)
+* ### [chapter-7](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-7) (_solution_)
