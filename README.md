@@ -15,7 +15,7 @@ Hello world
 
 ### Run node script
 
-1. Create a file `script.js`
+1. Create a file `index.js`
 2. Add some javascript  
 ```
 console.log('Hello world')
@@ -23,7 +23,7 @@ console.log('Hello world')
 3. Run the script
 ```
 $ cd path/to/chapter-0/
-$ node script.js
+$ node index.js
 > Hello world
 ```
 
