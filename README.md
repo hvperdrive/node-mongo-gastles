@@ -2,6 +2,26 @@
 
 ## Chapter 2 - Sync vs Async
 
+### Example: setTimeout
+
+1. Update the _(index.js)_ frile
+```
+console.log('Start Script!');
+
+setTimeout(() => {
+    console.log('Hello world!');
+}, 1000);
+
+console.log('Stop Script!');
+```
+
+2. Output
+```
+Start Script!
+Stop Script!
+Hello world!
+```
+
 ### Example: Read a file sync and async
 
 1. Update the _(index.js)_ file
