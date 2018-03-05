@@ -4,7 +4,7 @@
 
 ### Example: Read a file sync and async
 
-1. Create a js file _(index.js)_
+1. Update the _(index.js)_ file
 ```
 const fs = require('fs');
 
