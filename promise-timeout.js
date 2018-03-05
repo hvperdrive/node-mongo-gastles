@@ -3,7 +3,7 @@ console.log('Start Script!');
 const myPromise = () => {
 	return new Promise(resolve => {
 		setTimeout(() => {
-			resolve("Hello world");
+			resolve("Hello world!");
 		}, 1000);
 	});
 };
