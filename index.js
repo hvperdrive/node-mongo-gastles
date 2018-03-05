@@ -1,31 +1,14 @@
-const fs = require('fs');
+var express = require('express');
+var app = express();
 
-function readFileSyncDemo(path) {
-    console.log('START READING FILE SYNC:');
-
-    var data = fs.readFileSync(path, 'utf8');
-    console.log(data);
-
-    console.log('STOP READING FILE SYNC');
-}
-
-function readFileAsyncDemo(path) {
-    console.log('START READING FILE ASYNC:');
-
-    fs.readFile(path, 'utf8', (err, data) => {
-        if (err) throw err;
-        console.log('DATA: ', data);
-    });
-
-    console.log('STOP READING FILE ASYNC');
-} 
-
-
-/**
- * START TEST:
- */
-
-const demoPath = './hello-world.txt';
-readFileSyncDemo(demoPath);
-console.log('----------------------------------');
-readFileAsyncDemo(demoPath);
+const config = {
+    port: 3000,
+};
+ 
+app.get('/', (req, res) => {
+  res.send('Hello World')
+});
+ 
+app.listen(config.port, () => {
+    console.log(`Server listening at port ${config.port}.`); // eslint-disable-line no-console
+});
