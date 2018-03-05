@@ -1,7 +1,3 @@
-console.log('Start Script!');
+const chalk = require('chalk');
 
-setTimeout(() => {
-    console.log('Hello world!');
-}, 1000);
-
-console.log('Stop Script!');
+console.log(chalk.red('Hello world, this is chapter 1!')); 
