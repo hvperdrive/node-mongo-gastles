@@ -2,7 +2,96 @@
 
 ## Chapter 6
 
-...
+### Create a `Student model`
+
+http://mongoosejs.com/docs/models.html
+
+```
+const mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+
+const studentSchema = new Schema({ 
+    name: {
+        required: true,
+        type: String
+    }
+}, {
+    timestamps: true
+});
+
+module.exports = mongoose.model('Student', studentSchema);
+```
+
+### Update the `services/student.js` file
+
+1. Find all
+
+http://mongoosejs.com/docs/api.html#model_Model.find
+
+```
+module.exports.fetchAll = () => {
+    return StudentModel.find({}).exec();
+}
+``` 
+
+2. Find by id
+
+http://mongoosejs.com/docs/api.html#model_Model.findById
+
+```
+module.exports.fetchById = (id) => {
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        return new Promise((resolve, reject) => {
+            resolve(null);
+        });
+    }
+
+    return StudentModel.findOne({ _id: id }).lean().exec();
+}
+```
+
+3. Create
+
+```
+StudentModel.create(student);
+```
+
+4. Update
+
+```
+StudentModel.findOneAndUpdate({ _id: id }, student, { new: true });
+```
+
+5. Delete
+
+```
+return StudentModel.remove({ _id: id }).exec();
+```
+
+### Update controller
+
+1. Fetch all
+
+```
+module.exports.fetchOne = (req, res) => {
+    studentsService.fetchById(req.params.id).then((student) => {
+        if (student) {
+            res.status(200).json(student);
+        } else {
+            res.status(404).json({
+                error: 404,
+                message: 'Not Found'
+            });
+        }
+    }, (err) => {
+        res.status(500).json({
+            message: err.message,
+        });
+    });
+};
+```
+
+2. Repeat for `findOne`, `update`, `delete`
 
 ## Chapter 5
 
