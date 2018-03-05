@@ -4,6 +4,10 @@
 
 ...
 
+## Chapter 3
+
+...
+
 ## Chapter 2 - Sync vs Async
 
 ### Example: Read a file sync and async
