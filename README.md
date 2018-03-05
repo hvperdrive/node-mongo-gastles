@@ -1,5 +1,9 @@
 # Gastles NodeJS en MongoDB
 
+## Chapter 7
+
+This is the soluation of everything. Now go have fun!
+
 ## Chapter 6
 
 ...
