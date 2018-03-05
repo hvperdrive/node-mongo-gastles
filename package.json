@@ -10,7 +10,9 @@
     "hello": "node my-custom-script"
   },
   "dependencies": {
+    "body-parser": "1.18.2",
     "chalk": "^2.3.1",
-    "express": "4.16.2"
+    "express": "4.16.2",
+    "glob": "7.1.2"
   }
 }
