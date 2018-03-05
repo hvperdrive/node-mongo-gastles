@@ -2,7 +2,39 @@
 
 ## Chapter 4
 
-...
+### Add rest routes
+
+1. Create a `routes` folder with an `index.js`
+
+```
+const glob = require("glob");
+const path = require("path");
+
+module.exports = (app) => {
+
+    app.get('/', (req, res) => {
+        res.send('Hello World')
+    });
+      
+    glob.sync("./routes/!(index).js", {
+        absolute: true,
+    }).forEach(route => {
+        require(route)(app);
+    });
+};
+```
+
+2. Add the `routes/index.js` file to the `index.js` file
+
+```
+// Init routes
+require("./routes/")(app);
+```
+
+3. Add REST routes to `routes/student.js`
+
+https://hackernoon.com/restful-api-designing-guidelines-the-best-practices-60e1d954e7c9
+
 
 ## Chapter 3
 
