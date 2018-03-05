@@ -28,7 +28,7 @@ $ mongo
 ## Chapters
 
 * ### [chapter-0](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-0) (_warm up_)
-* ### [chapter-1](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-1/chapter-1) (npm ecosystem)
+* ### [chapter-1](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-1) (npm ecosystem)
 * ### [chapter-2](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-2) (_sync / async_)
 * ### [chapter-3](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-3) (_express_)
 * ### [chapter-4](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-4) (_rest routes_)
