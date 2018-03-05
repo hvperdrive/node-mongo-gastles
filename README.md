@@ -6,17 +6,104 @@
 
 ## Chapter 4
 
-...
+### Add rest routes
+
+1. Create a `routes` folder with an `index.js`
+
+```
+const glob = require("glob");
+const path = require("path");
+
+module.exports = (app) => {
+
+    app.get('/', (req, res) => {
+        res.send('Hello World')
+    });
+      
+    glob.sync("./routes/!(index).js", {
+        absolute: true,
+    }).forEach(route => {
+        require(route)(app);
+    });
+};
+```
+
+2. Add the `routes/index.js` file to the `index.js` file
+
+```
+// Init routes
+require("./routes/")(app);
+```
+
+3. Add REST routes to `routes/student.js`
+
+https://hackernoon.com/restful-api-designing-guidelines-the-best-practices-60e1d954e7c9
+
 
 ## Chapter 3
 
-...
+### express JS
+
+https://expressjs.com/
+
+1. Install `express`
+
+```
+$ npm i express
+```
+
+2. Update _index.js_
+
+```
+var express = require('express');
+var app = express();
+
+const config = {
+    port: 3000,
+};
+ 
+app.get('/', (req, res) => {
+  res.send('Hello World')
+});
+ 
+app.listen(config.port, () => {
+    console.log(`Server listening at port ${config.port}.`); // eslint-disable-line no-console
+});
+```
+
+3. Run the node server
+
+```
+$ nodemon
+```
+
+> Check http://localhost:3000/
 
 ## Chapter 2 - Sync vs Async
 
+### Example: setTimeout
+
+1. Update the _(index.js)_ frile
+```
+console.log('Start Script!');
+
+setTimeout(() => {
+    console.log('Hello world!');
+}, 1000);
+
+console.log('Stop Script!');
+```
+
+2. Output
+```
+Start Script!
+Stop Script!
+Hello world!
+```
+
 ### Example: Read a file sync and async
 
-1. Create a js file _(index.js)_
+1. Update the _(index.js)_ file
 ```
 const fs = require('fs');
 
@@ -89,7 +176,7 @@ https://docs.npmjs.com/files/package.json
 1. Create the `package.json` file
 ```
 {
-  "name": "chapter-1",
+  "name": "imd-node-mongo-gastles",
   "version": "1.0.0"
 }
 ```
@@ -98,10 +185,10 @@ https://docs.npmjs.com/files/package.json
 2. Add meta data fields
 ```
 {
-  "name": "chapter-1",
+  "name": "imd-node-mongo-gastles",
   "version": "1.0.0",
   "description": "",
-  "author": "Jasper De Smet <jasper.desmet@studiohyperdrive.be",
+  "author": "Jasper De Smet <jasper.desmet@studiohyperdrive.be>",
   "license": "ISC"
 }
 ```
@@ -109,34 +196,29 @@ https://docs.npmjs.com/files/package.json
 3. Add a main entry point
 ```
 {
-  "name": "chapter-1",
+  "name": "imd-node-mongo-gastles",
   "version": "1.0.0",
   "description": "",
-  "author": "Jasper De Smet <jasper.desmet@studiohyperdrive.be",
+  "author": "Jasper De Smet <jasper.desmet@studiohyperdrive.be>",
   "license": "ISC",
   "main": "index.js"
 }
 ```
 > The main field is the primary entry point to your program. The startpoint of the app of the primary module of the package.
 
-4. Create the main entry point file `index.js`
-```
-console.log('Hello world, this is chapter 2');
-```
-
-5. Run the node package / app
+4. Run the node package / app
 ```
 $ node .
-> Hello world, this is chapter 2
+> Hello world
 ```
 
-6. Add extra scripts
+5. Add extra scripts
 ```
 {
-  "name": "chapter-1",
+  "name": "imd-node-mongo-gastles",
   "version": "1.0.0",
   "description": "",
-  "author": "Jasper De Smet <jasper.desmet@studiohyperdrive.be",
+  "author": "Jasper De Smet <jasper.desmet@studiohyperdrive.be>",
   "license": "ISC",
   "main": "index.js",
   "scripts": {
@@ -145,7 +227,7 @@ $ node .
 }
 ```
 
-7. Run extra scripts
+6. Run extra scripts
 ```
 $ npm run test
 > echo "Error: no test specified" && exit 1
@@ -154,20 +236,20 @@ Error: no test specified
 ```
 > or use the shorthand: `npm test`
 
-8. Add a custom script
+7. Add a custom script
 
 Create a script file `my-custom-script.js` in this directory
 ```
-console.log('Hello world, this is chapter 2');
+console.log('Hello world, this is a custom script');
 ```
 Add the script to the `scripts` property in the `package.json`
 
 ```
 {
-  "name": "chapter-1",
+  "name": "imd-node-mongo-gastles",
   "version": "1.0.0",
   "description": "",
-  "author": "Jasper De Smet <jasper.desmet@studiohyperdrive.be",
+  "author": "Jasper De Smet <jasper.desmet@studiohyperdrive.be>",
   "license": "ISC",
   "main": "index.js",
   "scripts": {
@@ -177,7 +259,7 @@ Add the script to the `scripts` property in the `package.json`
 }
 ```
 
-9. Run the custom script
+8. Run the custom script
 ```
 $ npm run hello
 > node my-custom-script
@@ -211,10 +293,10 @@ $ npm install chalk
 2. Check the updated `package.json`
 ```
 {
-  "name": "chapter-1",
+  "name": "imd-node-mongo-gastles",
   "version": "1.0.0",
   "description": "",
-  "author": "Jasper De Smet <jasper.desmet@studiohyperdrive.be",
+  "author": "Jasper De Smet <jasper.desmet@studiohyperdrive.be>",
   "license": "ISC",
   "main": "index.js",
   "scripts": {
@@ -281,7 +363,7 @@ $ nodemon .
 
 4. Make a change in the source _(index.js)_
 ```
-console.log(chalk.red('Hello world, this is chapter 2!'));
+console.log(chalk.red('Hello world'));
 ```
 
 _Option: Using nodemon without global installation:_
