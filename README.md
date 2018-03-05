@@ -2,7 +2,62 @@
 
 ## Chapter 5
 
-...
+### Create a service 
+
+1. Create a file `students.js` in the `services` folder
+
+```
+const students = [
+    {
+        id: '1',
+        name: 'Jan Peeters',
+    },
+    {
+        id: '2',
+        name: 'Marie Jansens',
+    }
+];
+```
+
+2. Create a `fetchAll` function
+
+```
+module.exports.fetchAll = () => {
+    return students;
+}
+```
+
+3. Create a `fetchById` function
+
+```
+module.exports.fetchById = (id) => {
+    return students.find((student) => {
+        return student.id === id;
+    });
+}
+```
+
+### Create controllers
+
+1. Create a file `students.js` in the `controllers` folder
+
+2. Create a new `controller method`
+
+__Example:__
+```
+module.exports.fetchAll = (req, res) => {
+    res.status(200).json(studentsService.fetchAll());
+};
+```
+
+3. Update `routes/students.js`
+```
+const studentsService = require('../services/students');
+
+app.route('/api/students').get(studentsController.fetchAll);
+```
+
+4. Repeat for each route...
 
 ## Chapter 4
 
