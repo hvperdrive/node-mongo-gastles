@@ -21,7 +21,7 @@ https://docs.npmjs.com/files/package.json
 1. Create the `package.json` file
 ```
 {
-  "name": "chapter-1",
+  "name": "imd-node-mongo-gastles",
   "version": "1.0.0"
 }
 ```
