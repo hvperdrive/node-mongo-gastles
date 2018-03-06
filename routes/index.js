@@ -12,9 +12,4 @@ module.exports = (app) => {
     }).forEach(route => {
         require(route)(app);
     });
-
-    // Fallback route
-    // app.route(["/", "/*"]).all((req, res) => {
-    //     res.sendFile(path.join(__dirname, "./../../dist/index.html"));
-    // });
 };
