@@ -15,6 +15,9 @@ mongoose.connect('mongodb://localhost/imd-demo-app', (err) => {
     }
 });
 
+// set the view engine to ejs
+app.set('view engine', 'ejs');
+
 // Body parser
 app.use(bodyParser.json({ limit: "50mb", keepExtensions: true }));
  
