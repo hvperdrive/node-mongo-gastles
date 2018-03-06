@@ -2,7 +2,84 @@
 
 ## Chapter 7
 
-This is the soluation of everything. Now go have fun!
+### Add EJS as template engine
+
+http://www.embeddedjs.com/
+
+1. Install ejs
+
+```
+$ npm i ejs
+```
+
+2. Define view engine in `index.js`
+
+```
+// set the view engine to ejs
+app.set('view engine', 'ejs');
+```
+
+3. Create the `hello-world.ejs` file in the templates directory
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello world</title>
+</head>
+<body >
+
+<section>
+    <p>Hello world</p>
+</section>
+
+<footer>
+   this is the footer
+</footer>
+
+</body>
+</html>
+```
+
+3. Render the view 
+
+```
+app.get('/', (req, res) => {
+    res.render('../templates/hello-world');
+});
+```
+
+4. Create a `footer.ejs` file in the `templates` folder
+
+5. Include the footer template in the `hello-world` template
+
+```
+<footer>
+    <% include ./footer %>
+</footer>
+```
+
+6. Render a parameter
+
+```
+app.get('/', (req, res) => {
+    res.render('../templates/hello-world', {
+        message: 'Hello world',
+    });
+});
+```
+
+```
+<section>
+    <p><%= message %></p>
+</section>
+```
+
+### Other template engines
+
+- https://expressjs.com/en/guide/using-template-engines.html
+- https://pugjs.org/api/getting-started.html
+- https://www.npmjs.com/package/mustache
 
 ## Chapter 6
 
