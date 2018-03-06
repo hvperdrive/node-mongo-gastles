@@ -1,5 +1,9 @@
 # Gastles NodeJS en MongoDB
 
+## Chapter 8
+
+This is the soluation of everything. Now go have fun!
+
 ## Chapter 7
 
 ### Add EJS as template engine
