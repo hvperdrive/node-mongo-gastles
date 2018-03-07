@@ -543,4 +543,4 @@ $ mongo
 * ### [chapter-5](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-5) (_controllers and services_)
 * ### [chapter-6](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-6) (_mongo_)
 * ### [chapter-7](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-7) (_EJS templates_)
-* ### [chapter-7](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-8) (_solution_)
+* ### [chapter-8](https://github.com/hvperdrive/node-mongo-gastles/tree/chapter-8) (_solution_)
