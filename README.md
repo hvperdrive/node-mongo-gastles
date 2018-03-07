@@ -15,8 +15,8 @@ $ npm i express
 2. Update _index.js_
 
 ```
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
 const config = {
     port: 3000,
