@@ -49,11 +49,13 @@ app.set('view engine', 'ejs');
 
 ```
 app.get('/', (req, res) => {
-    res.render('../templates/hello-world');
+    res.render('hello-world');
 });
 ```
 
-4. Create a `footer.ejs` file in the `templates` folder
+4. Create a `footer.ejs` file in the `views` folder
+
+> `views` is the default folder for templates.
 
 5. Include the footer template in the `hello-world` template
 
