@@ -14,5 +14,5 @@ app.use(bodyParser.json({ limit: "50mb", keepExtensions: true }));
 require("./routes/")(app);
 
 app.listen(config.port, () => {
-    console.log(`Server listening at port ${config.port}.`); // eslint-disable-line no-console
+    console.log(`Server listening at port ${config.port}.`);
 });
