@@ -43,7 +43,7 @@ $ nodemon
 
 ### Example: setTimeout
 
-1. Update the _(index.js)_ frile
+1. Update the _(index.js)_ file
 ```
 console.log('Start Script!');
 
@@ -61,7 +61,40 @@ Stop Script!
 Hello world!
 ```
 
-### Example: Read a file sync and async
+### Example 1: Timeout examples
+
+1. Create the _(callback-timeout.js)_ file
+```
+console.log('Start Script!');
+
+setTimeout(() => {
+    console.log('Hello world!');
+}, 1000);
+
+console.log('Stop Script!');
+```
+
+2. Create the _(promise-timeout.js)_ file
+```
+console.log('Start Script!');
+
+const myPromise = () => {
+	return new Promise(resolve => {
+		setTimeout(() => {
+			resolve("Hello world!");
+		}, 1000);
+	});
+};
+
+myPromise()
+	.then((response) => {
+		console.log(response);
+	});
+
+console.log('Stop Script!');
+```
+
+### Example 2: Read a file sync and async
 
 1. Update the _(index.js)_ file
 ```
@@ -70,7 +103,7 @@ const fs = require('fs');
 function readFileSyncDemo(path) {
     console.log('START READING FILE SYNC:');
 
-    var data = fs.readFileSync(path, 'utf8');
+    const data = fs.readFileSync(path, 'utf8');
     console.log(data);
 
     console.log('STOP READING FILE SYNC');
