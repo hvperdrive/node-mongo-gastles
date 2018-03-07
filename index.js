@@ -1,5 +1,5 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
 const config = {
     port: 3000,
@@ -10,5 +10,5 @@ app.get('/', (req, res) => {
 });
  
 app.listen(config.port, () => {
-    console.log(`Server listening at port ${config.port}.`); // eslint-disable-line no-console
+    console.log(`Server listening at port ${config.port}.`);
 });
