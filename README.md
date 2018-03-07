@@ -94,6 +94,27 @@ require("./routes/")(app);
 
 https://hackernoon.com/restful-api-designing-guidelines-the-best-practices-60e1d954e7c9
 
+### Create middleware
+
+> https://expressjs.com/en/guide/using-middleware.html
+
+1. Create a folder `middleware` with a file `auth.js`
+
+```
+module.exports = (req, res, next) => {
+    // Add some logic here
+    req.isAuthenticated = true;
+    next();
+};
+```
+
+2. Use the middleware on the REST routes
+
+```
+app.route('/api/students').post(middleware, (req, res) => {
+    // do something
+});
+```
 
 ## Chapter 3
 
