@@ -1,3 +1,5 @@
+const middleware = require('../middleware/auth');
+
 const students = [
     {
         id: '1',
@@ -31,14 +33,7 @@ module.exports = (app) => {
         
     });
 
-    app.route('/api/students').get((req, res) => {
-        res.status(200).json({
-            id: 1,
-            name: 'Jan Peeters',
-        });
-    });
-
-    app.route('/api/students').post((req, res) => {
+    app.route('/api/students').post(middleware, (req, res) => {
         res.status(201).json(Object.assign({}, req.body, {
             id: (students.length + 1).toString(),
         }));
