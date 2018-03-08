@@ -1,5 +1,9 @@
 # Gastles NodeJS en MongoDB
 
+## Presentation
+
+https://studiohyperdrive.be/gastles-nodejs-imd-2018
+
 ## Requirements
 
 ### Node & npm (LTS)
